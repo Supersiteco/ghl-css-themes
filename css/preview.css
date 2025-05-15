@@ -1,0 +1,21 @@
+:root {
+  --primary: #e91e63;
+  --headlinefont: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: var(--headlinefont);
+  color: #111;
+}
+
+h1, h2, h3 {
+  color: var(--primary);
+}
+
+button {
+  background-color: var(--primary) !important;
+  border-radius: 40px !important;
+  color: white !important;
+  padding: 14px 28px;
+  font-weight: bold;
+}
