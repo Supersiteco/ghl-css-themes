@@ -1,6 +1,6 @@
 :root {
-  --primary: #e91e63;
-  --headlinefont: 'Roboto', sans-serif;
+  --primary: #000000;
+  --headlinefont: 'Inter', sans-serif;
 }
 
 body {
@@ -14,7 +14,7 @@ h1, h2, h3 {
 
 button {
   background-color: var(--primary) !important;
-  border-radius: 40px !important;
+  border-radius: 100px !important;
   color: white !important;
   padding: 14px 28px;
   font-weight: bold;
