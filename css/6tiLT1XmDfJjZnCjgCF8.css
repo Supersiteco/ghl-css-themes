@@ -1,14 +1,18 @@
 :root {
-  --primary: #0f172a;
-  --secondary: #1e40af;
+  /* Color Palette */
+  --primary: #1e3a8a;       /* Indigo */
+  --secondary: #9333ea;     /* Purple */
   --white: #ffffff;
   --black: #000000;
-  --text-color: #111827;
-  --link-color: #2563eb;
-  --headlinefont: 'Inter', sans-serif;
-  --contentfont: 'Inter', sans-serif;
+  --text-color: #374151;    /* Gray-700 */
+  --link-color: #3b82f6;    /* Blue-500 */
+
+  /* Typography */
+  --headlinefont: 'Poppins', sans-serif;
+  --contentfont: 'Poppins', sans-serif;
 }
 
+/* Base Styles */
 body, html {
   font-family: var(--contentfont) !important;
   color: var(--text-color) !important;
@@ -24,7 +28,7 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 700 !important;
 }
 
-/* Buttons (both IDs and class-level) */
+/* Buttons */
 #button-STx-CdihXC button,
 #button-p9VpOUayG8 button,
 .cbutton-STx-CdihXC,
@@ -43,6 +47,5 @@ a, a * {
   color: var(--link-color) !important;
 }
 
-/* Ensure fonts load first */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
