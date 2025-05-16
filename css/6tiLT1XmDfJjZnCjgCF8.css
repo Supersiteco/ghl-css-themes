@@ -1,51 +1,108 @@
 :root {
-  /* Color Palette */
-  --primary: #1e3a8a;       /* Indigo */
-  --secondary: #9333ea;     /* Purple */
-  --white: #ffffff;
-  --black: #000000;
-  --text-color: #374151;    /* Gray-700 */
-  --link-color: #3b82f6;    /* Blue-500 */
+  --primary: #24a148; /* Main green */
+  --secondary: #24a148;
+  --text-color: #121212;
+  --link-color: #24a148;
+  --headlinefont: 'Inter', sans-serif;
+  --contentfont: 'Inter', sans-serif;
 
-  /* Typography */
-  --headlinefont: 'Poppins', sans-serif;
-  --contentfont: 'Poppins', sans-serif;
+  /* Override all icon + bullet colors used by GHL */
+  --color-mangpfqn: #24a148;
+  --color-manhlbck: #2a2a2a;
+  --color-manhmc8r: #2a2a2a;
+  --color-manhn5b1: #2a2a2a;
+
+  /* Optional background tweaks */
+  --color-lx2qdjfj: #f5fff8;
+  --color-manhk55o: #f5fff8;
 }
 
-/* Base Styles */
-body, html {
-  font-family: var(--contentfont) !important;
-  color: var(--text-color) !important;
-  background-color: var(--white) !important;
+/* Ensure fonts are Inter everywhere */
+body,
+.hl_page-preview--content,
+h1, h2, h3, h4, h5, h6,
+.hl_page-preview--content * {
+  font-family: var(--headlinefont) !important;
+}
+
+/* Subheadings */
+.c-sub-heading,
+.csub-heading-ZpivZ2zT4p,
+.csub-heading-dyp8bOSPnU,
+.csub-heading-fw_eVymZ7R {
+  color: var(--primary) !important;
+  font-family: var(--headlinefont) !important;
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6,
-.heading-0H4DJ0v8VV h1,
-.heading-bduB4f6Wa2 h1 {
-  font-family: var(--headlinefont) !important;
+h1, h2, h3,
+.cheading-0H4DJ0v8VV,
+.cheading-bduB4f6Wa2 {
   color: var(--primary) !important;
-  font-weight: 700 !important;
+  font-weight: 700;
+}
+
+/* Bullet text */
+.cbulletList-9i3WnUwU4c,
+.cbulletList-o_e7ivYfNR {
+  color: var(--text-color) !important;
+  font-family: var(--headlinefont) !important;
+}
+
+/* Bullet icons */
+.cbulletList-9i3WnUwU4c ul li::marker,
+.cbulletList-o_e7ivYfNR ul li::marker {
+  font-family: "Font Awesome 5 Free";
+  color: var(--primary) !important;
+  font-weight: 700;
 }
 
 /* Buttons */
-#button-STx-CdihXC button,
-#button-p9VpOUayG8 button,
+button,
 .cbutton-STx-CdihXC,
-.cbutton-p9VpOUayG8 {
+.cbutton-p9VpOUayG8,
+.cbutton-AckeidhSQ9,
+.hl_page-preview--content button {
   background-color: var(--primary) !important;
-  color: var(--white) !important;
+  color: white !important;
   border-radius: 100px !important;
-  padding: 16px 32px !important;
-  font-weight: 600 !important;
-  font-family: var(--headlinefont) !important;
+  padding: 14px 28px !important;
   border: none !important;
+  font-weight: bold !important;
+  font-family: var(--headlinefont) !important;
 }
 
-/* Links */
-a, a * {
-  color: var(--link-color) !important;
+/* Button icon text */
+.button-icon-start,
+.button-icon-end {
+  color: white !important;
 }
+
+/* Mobile + desktop heading text sizes */
+@media screen and (max-width: 480px) {
+  h1, h2 {
+    font-size: 28px !important;
+  }
+
+  .sub-heading,
+  .csub-heading-ZpivZ2zT4p,
+  .csub-heading-dyp8bOSPnU {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  h1, h2 {
+    font-size: 36px !important;
+  }
+
+  .sub-heading,
+  .csub-heading-ZpivZ2zT4p,
+  .csub-heading-dyp8bOSPnU {
+    font-size: 22px !important;
+  }
+}
+
 
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
