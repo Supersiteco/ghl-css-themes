@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-  /* --- Linear-inspired Color Tokens (Variable Names Preserved) --- */
   --primary: #5e6ad2;
   --secondary: #3c3f4a;
   --text-color: #0e0f12;
@@ -20,7 +19,7 @@
   --color-manhk55o: #f7f8f9;
 }
 
-/* --- Global font --- */
+/* Global font */
 body,
 .hl_page-preview--content,
 h1, h2, h3, h4, h5, h6,
@@ -29,7 +28,7 @@ h1, h2, h3, h4, h5, h6,
   color: var(--text-color);
 }
 
-/* --- Subheadings --- */
+/* Subheadings */
 .c-sub-heading,
 .csub-heading-ZpivZ2zT4p,
 .csub-heading-dyp8bOSPnU,
@@ -41,7 +40,7 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: 0.05em;
 }
 
-/* --- Headings --- */
+/* Headings */
 h1, h2, h3,
 .cheading-0H4DJ0v8VV,
 .cheading-bduB4f6Wa2 {
@@ -51,14 +50,14 @@ h1, h2, h3,
   line-height: 1.2;
 }
 
-/* --- Bullet list text --- */
+/* Bullet text */
 .cbulletList-9i3WnUwU4c,
 .cbulletList-o_e7ivYfNR {
   color: var(--text-color) !important;
   font-family: var(--headlinefont) !important;
 }
 
-/* --- Bullet icons --- */
+/* Bullet icons */
 .cbulletList-9i3WnUwU4c ul li::marker,
 .cbulletList-o_e7ivYfNR ul li::marker {
   font-family: "Font Awesome 5 Free";
@@ -68,7 +67,7 @@ h1, h2, h3,
   filter: drop-shadow(0 0 1px var(--primary));
 }
 
-/* --- Buttons --- */
+/* Buttons */
 button,
 .cbutton-STx-CdihXC,
 .cbutton-p9VpOUayG8,
@@ -88,32 +87,28 @@ button,
   isolation: isolate;
 }
 
-button::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.2), transparent 70%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: 0;
+/* Button text inside GHL */
+.main-heading-button {
+  color: white !important;
+  position: relative;
+  z-index: 2;
 }
 
-button:hover::before {
-  opacity: 1;
-}
-
-button:hover {
+/* Optional: subtle inner glow effect */
+button:hover,
+.cbutton-STx-CdihXC:hover,
+.cbutton-p9VpOUayG8:hover {
   transform: translateY(-1px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 12px 28px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08), 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Button icon text --- */
+/* Button icon text */
 .button-icon-start,
 .button-icon-end {
   color: white !important;
 }
 
-/* --- Responsive heading sizes --- */
+/* Responsive headings */
 @media screen and (max-width: 480px) {
   h1, h2 {
     font-size: 28px !important;
