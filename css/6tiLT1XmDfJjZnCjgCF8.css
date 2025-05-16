@@ -1,68 +1,48 @@
-/* === Load Fonts First === */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-/* === Brand Tokens === */
 :root {
-  --primary: #000000;
+  --primary: #0f172a;
+  --secondary: #1e40af;
+  --white: #ffffff;
+  --black: #000000;
+  --text-color: #111827;
+  --link-color: #2563eb;
   --headlinefont: 'Inter', sans-serif;
   --contentfont: 'Inter', sans-serif;
 }
 
-/* === Apply Base Font Globally === */
-body,
-.hl_page-preview--content,
-.hl_page-preview--content * {
+body, html {
   font-family: var(--contentfont) !important;
-  color: #111;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color) !important;
+  background-color: var(--white) !important;
 }
 
-/* === Headings === */
-h1, h2, h3,
-.cheading-4gSZ-xumrG h1,
-.cheading-de0WuaG2Nb h1,
-.csub-heading-fw_eVymZ7R h2,
-.csub-heading-sNhKG62lff h2 {
+/* Headings */
+h1, h2, h3, h4, h5, h6,
+.heading-0H4DJ0v8VV h1,
+.heading-bduB4f6Wa2 h1 {
   font-family: var(--headlinefont) !important;
   color: var(--primary) !important;
-  letter-spacing: -0.5px;
-  font-weight: 600;
+  font-weight: 700 !important;
 }
 
-/* === Buttons === */
-button,
-.btn,
-.gform_button,
-.cbutton-ypo19qUV5Y,
-.cbutton-AckeidhSQ9 {
+/* Buttons (both IDs and class-level) */
+#button-STx-CdihXC button,
+#button-p9VpOUayG8 button,
+.cbutton-STx-CdihXC,
+.cbutton-p9VpOUayG8 {
   background-color: var(--primary) !important;
-  color: white !important;
-  font-family: var(--headlinefont) !important;
-  font-weight: bold !important;
+  color: var(--white) !important;
   border-radius: 100px !important;
-  padding: 14px 28px;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  transition: background-color 0.3s ease;
+  padding: 16px 32px !important;
+  font-weight: 600 !important;
+  font-family: var(--headlinefont) !important;
+  border: none !important;
 }
 
-button:hover,
-.cbutton-ypo19qUV5Y:hover,
-.cbutton-AckeidhSQ9:hover {
-  background-color: #333 !important;
+/* Links */
+a, a * {
+  color: var(--link-color) !important;
 }
 
-/* === Bullet Lists === */
-.cbulletList-o_e7ivYfNR li {
-  color: var(--primary) !important;
-  font-family: var(--contentfont) !important;
-}
+/* Ensure fonts load first */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-/* === Optional Container Cleanup === */
-.hl_page-preview--content {
-  background: white !important;
-  padding: 0;
-  margin: 0;
-}
