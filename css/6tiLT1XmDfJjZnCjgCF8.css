@@ -1,6 +1,6 @@
 /* ============================
-   ASTRO-INSPIRED DARK THEME CSS v2
-   Polished + Corrected based on feedback
+   ASTRO-INSPIRED DARK THEME CSS v3
+   Final polish with glow fixes, hover refinements, text clarity
 ============================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
@@ -23,13 +23,13 @@
 
   --glow-color: rgba(167, 139, 250, 0.4);
   --glow-accent: rgba(255, 255, 255, 0.04);
-  --glass-bg: rgba(255, 255, 255, 0.035);
+  --glass-bg: rgba(255, 255, 255, 0.02);
 }
 
-/* Global background */
 body {
   background: radial-gradient(ellipse at top left, #1e1b2e 0%, #0f0e16 100%) !important;
   color: var(--text-color);
+  font-family: var(--headlinefont);
 }
 
 .hl_page-preview--content,
@@ -46,6 +46,7 @@ h1, h2, h3,
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.01em;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
 }
 
 /* Subheadings */
@@ -87,11 +88,26 @@ button,
   box-shadow: 0 8px 20px var(--glow-color);
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 
 button:hover {
   transform: translateY(-2px);
   box-shadow: 0 0 0px 3px var(--glow-color), 0 14px 24px var(--glow-color);
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140%;
+  height: 300%;
+  background: radial-gradient(ellipse at center, var(--glow-color), transparent);
+  transform: translate(-50%, -50%);
+  opacity: 0.25;
+  z-index: -1;
+  filter: blur(32px);
 }
 
 .main-heading-button,
@@ -108,7 +124,7 @@ button:hover {
   border: none;
 }
 
-/* Video rounded + polish */
+/* Rounded video & shadows */
 .video-container figure,
 .video-container,
 .cvideo-40uv-KbGRV iframe {
@@ -118,7 +134,7 @@ button:hover {
   background: #000;
 }
 
-/* Glow background */
+/* Section glow */
 #section-uXQ_FD0Nu8 {
   position: relative;
   overflow: visible;
@@ -140,10 +156,65 @@ button:hover {
   pointer-events: none;
 }
 
-/* Optional glass card look */
-.section-uX
-   
+/* Glass card look */
+.section-uXQ_FD0Nu8 .inner,
+.row-zOtnQQ0AxG {
+  background: var(--glass-bg);
+  border-radius: 20px;
+  padding: 3rem;
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
 
+/* Footer */
+.cparagraph-CoFamRGU-U,
+.cparagraph-tQXMyOmc-h {
+  color: #a1a1aa !important;
+  font-size: 14px;
+  text-align: center;
+}
+
+.cparagraph-CoFamRGU-U a,
+.cparagraph-tQXMyOmc-h a {
+  color: var(--primary) !important;
+  transition: color 0.3s;
+}
+
+.cparagraph-CoFamRGU-U a:hover,
+.cparagraph-tQXMyOmc-h a:hover {
+  color: white !important;
+}
+
+/* Animation (optional) */
+.fadeInUp {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 480px) {
+  h1, h2 { font-size: 28px !important; }
+  .csub-heading-ZpivZ2zT4p,
+  .csub-heading-dyp8bOSPnU { font-size: 16px !important; }
+}
+
+@media screen and (min-width: 481px) {
+  h1, h2 { font-size: 36px !important; }
+  .csub-heading-ZpivZ2zT4p,
+  .csub-heading-dyp8bOSPnU { font-size: 20px !important; }
+}
 /* Hide original logo image */
 .image-container img.hl-optimized {
   display: none !important;
