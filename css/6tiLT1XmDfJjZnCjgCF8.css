@@ -1,101 +1,21 @@
-:root {
+This is what it is now: :root {
   --primary: #000000;
-  --secondary: #ff4081;
   --headlinefont: 'Inter', sans-serif;
-  --contentfont: 'Lato', sans-serif;
-  --text-color: #1a1a1a;
-  --link-color: #ff4081;
-  --radius: 100px;
 }
 
-/* Body + Typography */
 body {
-  font-family: var(--contentfont);
-  color: var(--text-color);
-  background-color: #fdfdfd;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  font-family: var(--headlinefont);
+  color: #111;
 }
 
 h1, h2, h3 {
-  font-family: var(--headlinefont);
-  color: var(--primary);
-  letter-spacing: -0.5px;
-  font-weight: 600;
-}
-
-h1 {
-  font-size: 2.5rem;
-  line-height: 1.2;
-}
-
-h2 {
-  font-size: 1.75rem;
-  line-height: 1.3;
-}
-
-h3 {
-  font-size: 1.25rem;
-}
-
-/* ✅ Known working selectors */
-.cheading-0H4DJ0v8VV,
-.cheading-bduB4f6Wa2 {
-  color: var(--primary);
-  font-family: var(--headlinefont);
-}
-
-.csub-heading-ZpivZ2zT4p,
-.csub-heading-dyp8bOSPnU {
-  color: var(--secondary);
-  font-family: var(--headlinefont);
-  font-size: 1.1rem;
-}
-
-.cbulletList-9i3WnUwU4c ul li {
-  color: var(--text-color);
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.cbulletList-9i3WnUwU4c ul li::marker {
   color: var(--primary);
 }
 
-/* ✅ Buttons */
-#button-STx-CdihXC,
-#button-p9VpOUayG8 {
+button {
   background-color: var(--primary) !important;
+  border-radius: 100px !important;
   color: white !important;
-  border-radius: var(--radius) !important;
-  padding: 14px 32px !important;
-  font-family: var(--headlinefont) !important;
-  font-size: 1.1rem !important;
-  font-weight: 600 !important;
-  border: 2px solid var(--secondary);
-  transition: all 0.2s ease;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-  cursor: pointer;
-}
-
-#button-STx-CdihXC:hover,
-#button-p9VpOUayG8:hover {
-  background-color: var(--secondary) !important;
-  color: white !important;
-}
-
-/* ✅ Footer text */
-.cparagraph-CoFamRGU-U,
-.cparagraph-tQXMyOmc-h {
-  font-family: var(--contentfont);
-  font-size: 0.9rem;
-  color: #777;
-  text-align: center;
-}
-
-.cparagraph-CoFamRGU-U a,
-.cparagraph-tQXMyOmc-h a {
-  color: var(--link-color);
-  text-decoration: underline;
+  padding: 14px 28px;
+  font-weight: bold;
 }
