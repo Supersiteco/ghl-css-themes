@@ -1,172 +1,212 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+/* ============================
+   ASTRO-INSPIRED DARK THEME CSS
+   ============================ */
 
-:root {
-  --primary: #7b61ff; /* Astro violet/indigo */
-  --secondary: #9333ea;
-  --text-color: #ffffff;
-  --link-color: var(--primary);
-  --headlinefont: 'Poppins', sans-serif;
-  --contentfont: 'Poppins', sans-serif;
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-  --color-mangpfqn: var(--primary);
-  --color-manhlbck: #e0e0e0;
-  --color-manhmc8r: #cccccc;
-  --color-manhn5b1: #aaaaaa;
-
-  --color-lx2qdjfj: #111016;
-  --color-manhk55o: #111016;
-
-  --glow-color: rgba(123, 97, 255, 0.3);
-}
-
-/* === Background gradient === */
-body {
-  background: radial-gradient(circle at 30% 40%, #1c1b23, #0e0d11) !important;
-  color: var(--text-color);
-}
-
-/* Global font */
-body,
-.hl_page-preview--content,
-.hl_page-preview--content * {
-  font-family: var(--headlinefont) !important;
-  color: var(--text-color);
-}
-
-/* Headings */
-h1, h2, h3,
-.cheading-0H4DJ0v8VV,
-.cheading-bduB4f6Wa2 {
-  color: #ffffff !important;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-}
-
-/* Subheadings */
-.csub-heading-ZpivZ2zT4p,
-.csub-heading-dyp8bOSPnU {
-  color: var(--primary) !important;
-  font-weight: 600 !important;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* Paragraphs & bullet text */
-.cbulletList-9i3WnUwU4c,
-.cbulletList-o_e7ivYfNR {
-  color: #d0d0d0 !important;
-  font-weight: 400;
-}
-
-/* Bullet icons */
-.cbulletList-9i3WnUwU4c ul li::marker,
-.cbulletList-o_e7ivYfNR ul li::marker {
-  font-family: "Font Awesome 5 Free";
-  color: var(--primary) !important;
-  font-weight: 700;
-  font-size: 1.2em;
-}
-
-/* Buttons */
-button,
-.cbutton-STx-CdihXC,
-.cbutton-p9VpOUayG8,
-.hl_page-preview--content button {
-  background-color: var(--primary) !important;
-  color: white !important;
-  border-radius: 100px !important;
-  border: none !important;
-  font-weight: 700 !important;
-  font-family: var(--headlinefont) !important;
-  transition: all 0.3s ease;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-
-/* Button hover */
-button:hover,
-.cbutton-STx-CdihXC:hover,
-.cbutton-p9VpOUayG8:hover {
-  box-shadow: 0 0 0px 4px var(--glow-color), 0 0 30px var(--glow-color);
-  transform: scale(1.02);
-}
-
-/* Button text inside GHL */
-.main-heading-button {
-  color: white !important;
-}
-
-/* Button icon text */
-.button-icon-start,
-.button-icon-end {
-  color: white !important;
-}
-
-/* Responsive text */
-@media screen and (max-width: 480px) {
-  h1, h2 {
-    font-size: 28px !important;
-  }
-  .csub-heading-ZpivZ2zT4p,
-  .csub-heading-dyp8bOSPnU {
-    font-size: 16px !important;
-  }
-}
-
-@media screen and (min-width: 481px) {
-  h1, h2 {
-    font-size: 36px !important;
-  }
-  .csub-heading-ZpivZ2zT4p,
-  .csub-heading-dyp8bOSPnU {
-    font-size: 20px !important;
-  }
-}
-
-/* Section background override */
-#section-uXQ_FD0Nu8,
-#section-OCUM475QX7,
-#section-DNU3a-G89w,
-#section-l0GyoipRh3 {
-  background: transparent !important;
-  position: relative;
-  z-index: 1;
-}
-
-/* Glow background behind hero */
-#section-uXQ_FD0Nu8::before {
-  content: '';
-  position: absolute;
-  top: -100px;
-  left: 50%;
-  width: 800px;
-  height: 600px;
-  transform: translateX(-50%);
-  background: radial-gradient(ellipse at center, var(--glow-color), transparent 70%);
-  filter: blur(100px);
-  z-index: 0;
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-/* Footer paragraph text */
-.cparagraph-CoFamRGU-U,
-.cparagraph-tQXMyOmc-h {
-  color: #999 !important;
-  font-size: 14px;
-  text-align: center;
-}
-
-/* Links */
-a {
-  color: var(--primary) !important;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
+   :root {
+     --primary: #a78bfa; /* Soft violet */
+     --secondary: #7b61ff;
+     --text-color: #ffffff;
+     --link-color: var(--primary);
+     --headlinefont: 'Poppins', sans-serif;
+     --contentfont: 'Poppins', sans-serif;
+   
+     --color-mangpfqn: var(--primary);
+     --color-manhlbck: #d4d4d8;
+     --color-manhmc8r: #a1a1aa;
+     --color-manhn5b1: #71717a;
+   
+     --color-lx2qdjfj: #0e0e10;
+     --color-manhk55o: #0e0e10;
+   
+     --glow-color: rgba(167, 139, 250, 0.35);
+     --glow-accent: rgba(255, 255, 255, 0.05);
+     --glass-bg: rgba(255, 255, 255, 0.04);
+   }
+   
+   /* ============================
+      BASE STYLING
+      ============================ */
+   
+   body {
+     background: radial-gradient(ellipse at top left, #1e1b2e 0%, #0f0e16 100%) !important;
+     color: var(--text-color);
+   }
+   
+   .hl_page-preview--content,
+   .hl_page-preview--content * {
+     font-family: var(--headlinefont) !important;
+     color: var(--text-color);
+   }
+   
+   h1, h2, h3,
+   .cheading-0H4DJ0v8VV,
+   .cheading-bduB4f6Wa2 {
+     color: white !important;
+     font-weight: 700;
+     line-height: 1.2;
+     letter-spacing: -0.01em;
+   }
+   
+   .csub-heading-ZpivZ2zT4p,
+   .csub-heading-dyp8bOSPnU {
+     color: var(--primary) !important;
+     font-weight: 600 !important;
+     text-transform: uppercase;
+     letter-spacing: 0.05em;
+   }
+   
+   .cbulletList-9i3WnUwU4c,
+   .cbulletList-o_e7ivYfNR {
+     color: #d4d4d8 !important;
+     font-weight: 400;
+   }
+   
+   .cbulletList-9i3WnUwU4c ul li::marker,
+   .cbulletList-o_e7ivYfNR ul li::marker {
+     font-family: "Font Awesome 5 Free";
+     color: var(--primary) !important;
+     font-weight: 700;
+     font-size: 1.2em;
+   }
+   
+   /* ============================
+      BUTTONS
+      ============================ */
+   
+   button,
+   .cbutton-STx-CdihXC,
+   .cbutton-p9VpOUayG8,
+   .hl_page-preview--content button {
+     background-color: var(--primary) !important;
+     color: white !important;
+     border-radius: 100px !important;
+     border: none !important;
+     font-weight: 700 !important;
+     font-family: var(--headlinefont) !important;
+     transition: all 0.3s ease;
+     position: relative;
+     overflow: hidden;
+     box-shadow: 0 4px 20px var(--glow-color);
+   }
+   
+   button:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 0 0px 3px var(--glow-color), 0 12px 24px var(--glow-color);
+   }
+   
+   .button-icon-start,
+   .button-icon-end {
+     color: white !important;
+   }
+   
+   .main-heading-button {
+     color: white !important;
+   }
+   
+   /* ============================
+      HEADER (white bar)
+      ============================ */
+   
+   #section-OCUM475QX7 {
+     background: white !important;
+     border: none !important;
+     box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+   }
+   
+   .image-container img.hl-optimized {
+     display: inline-block !important;
+   }
+   
+   /* ============================
+      VIDEO STYLING (rounded corners)
+      ============================ */
+   
+   .video-container figure,
+   .video-container,
+   .cvideo-40uv-KbGRV iframe {
+     border-radius: 20px !important;
+     overflow: hidden;
+     box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+   }
+   
+   /* ============================
+      GLOW BACKGROUND EFFECT
+      ============================ */
+   
+   #section-uXQ_FD0Nu8 {
+     position: relative;
+     overflow: hidden;
+     background-color: transparent !important;
+     z-index: 1;
+   }
+   
+   #section-uXQ_FD0Nu8::before {
+     content: '';
+     position: absolute;
+     top: -80px;
+     left: 50%;
+     width: 1000px;
+     height: 1000px;
+     transform: translateX(-50%);
+     background: radial-gradient(ellipse at center, var(--glow-color), transparent 70%);
+     filter: blur(160px);
+     opacity: 0.6;
+     z-index: 0;
+     pointer-events: none;
+   }
+   
+   /* ============================
+      FOOTER
+      ============================ */
+   
+   .cparagraph-CoFamRGU-U,
+   .cparagraph-tQXMyOmc-h {
+     color: #a1a1aa !important;
+     font-size: 14px;
+     text-align: center;
+   }
+   
+   /* ============================
+      RESPONSIVE TYPE
+      ============================ */
+   
+   @media screen and (max-width: 480px) {
+     h1, h2 {
+       font-size: 28px !important;
+     }
+     .csub-heading-ZpivZ2zT4p,
+     .csub-heading-dyp8bOSPnU {
+       font-size: 16px !important;
+     }
+   }
+   
+   @media screen and (min-width: 481px) {
+     h1, h2 {
+       font-size: 36px !important;
+     }
+     .csub-heading-ZpivZ2zT4p,
+     .csub-heading-dyp8bOSPnU {
+       font-size: 20px !important;
+     }
+   }
+   
+   /* ============================
+      OPTIONAL SECTION GLASS EFFECT
+      ============================ */
+   
+   /* Example: apply to section container if desired */
+ 
+   .section-uXQ_FD0Nu8 .inner {
+     background: var(--glass-bg);
+     border-radius: 24px;
+     backdrop-filter: blur(16px);
+     border: 1px solid rgba(255, 255, 255, 0.05);
+     box-shadow: 0 0 0 1px rgba(255,255,255,0.03);
+   }
+ 
+   
 
 /* Hide original logo image */
 .image-container img.hl-optimized {
