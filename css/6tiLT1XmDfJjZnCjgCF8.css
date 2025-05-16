@@ -1,21 +1,110 @@
 :root {
   --primary: #000000;
+  --secondary: #ff4081;
   --headlinefont: 'Inter', sans-serif;
+  --contentfont: 'Lato', sans-serif;
+  --text-color: #1a1a1a;
+  --link-color: #ff4081;
+  --radius: 24px;
 }
 
+/* === Global Reset === */
 body {
-  font-family: var(--headlinefont);
-  color: #111;
+  font-family: var(--contentfont);
+  color: var(--text-color);
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
-h1, h2, h3 {
+/* === Headings === */
+.cheading-0H4DJ0v8VV h1,
+.cheading-bduB4f6Wa2 h1 {
+  font-family: var(--headlinefont);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.csub-heading-ZpivZ2zT4p h2,
+.csub-heading-dyp8bOSPnU h2 {
+  font-family: var(--headlinefont);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--secondary);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+/* === Bullet List === */
+.cbulletList-9i3WnUwU4c ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.cbulletList-9i3WnUwU4c ul li {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.cbulletList-9i3WnUwU4c ul li::marker {
   color: var(--primary);
 }
 
-button {
+/* === Buttons === */
+#button-STx-CdihXC,
+#button-p9VpOUayG8 {
   background-color: var(--primary) !important;
-  border-radius: 100px !important;
   color: white !important;
-  padding: 14px 28px;
-  font-weight: bold;
+  border-radius: var(--radius) !important;
+  padding: 14px 28px !important;
+  font-family: var(--headlinefont) !important;
+  font-size: 1.125rem !important;
+  font-weight: 600 !important;
+  border: 2px solid var(--secondary);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+#button-STx-CdihXC:hover,
+#button-p9VpOUayG8:hover {
+  background-color: var(--secondary) !important;
+  color: white !important;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+/* === Sections === */
+.section-uXQ_FD0Nu8,
+.section-OCUM475QX7 {
+  background: #ffffff;
+  padding: 64px 24px;
+  border-radius: var(--radius);
+  box-shadow: 0 0 0 1px #eee;
+}
+
+/* === Footer === */
+.section-l0GyoipRh3 {
+  background-color: #f7f7f7;
+  padding: 40px 24px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.cparagraph-CoFamRGU-U p,
+.cparagraph-tQXMyOmc-h p {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.cparagraph-CoFamRGU-U a,
+.cparagraph-tQXMyOmc-h a {
+  color: var(--link-color);
+  text-decoration: underline;
 }
