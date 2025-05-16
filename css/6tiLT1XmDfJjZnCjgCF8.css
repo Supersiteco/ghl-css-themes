@@ -1,8 +1,3 @@
-/* ============================
-   ASTRO-INSPIRED DARK THEME CSS v3
-   Final polish with glow fixes, hover refinements, text clarity
-============================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
@@ -14,7 +9,7 @@
   --contentfont: 'Poppins', sans-serif;
 
   --color-mangpfqn: var(--primary);
-  --color-manhlbck: #d4d4d8;
+  --color-manhlbck: #e4e4e7;
   --color-manhmc8r: #a1a1aa;
   --color-manhn5b1: #71717a;
 
@@ -22,14 +17,13 @@
   --color-manhk55o: #0e0e10;
 
   --glow-color: rgba(167, 139, 250, 0.4);
-  --glow-accent: rgba(255, 255, 255, 0.04);
-  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-bg: rgba(255, 255, 255, 0.025);
 }
 
 body {
-  background: radial-gradient(ellipse at top left, #1e1b2e 0%, #0f0e16 100%) !important;
-  color: var(--text-color);
+  background: radial-gradient(circle at top left, #1e1b2e 0%, #0f0e16 100%) !important;
   font-family: var(--headlinefont);
+  color: var(--text-color);
 }
 
 .hl_page-preview--content,
@@ -38,42 +32,54 @@ body {
   color: var(--text-color);
 }
 
-/* Headings */
+/* ====================================
+   LOGO HEADER (keep white top strip)
+==================================== */
+#section-OCUM475QX7 {
+  background: white !important;
+  color: black !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: none;
+}
+
+/* ====================================
+   HEADINGS & TEXT
+==================================== */
 h1, h2, h3,
 .cheading-0H4DJ0v8VV,
 .cheading-bduB4f6Wa2 {
   color: white !important;
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-/* Subheadings */
 .csub-heading-ZpivZ2zT4p,
 .csub-heading-dyp8bOSPnU {
   color: var(--primary) !important;
-  font-weight: 600 !important;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+  font-weight: 600;
 }
 
-/* Bullet list */
+/* ====================================
+   BULLETS
+==================================== */
 .cbulletList-9i3WnUwU4c,
 .cbulletList-o_e7ivYfNR {
   color: #d4d4d8 !important;
-  font-weight: 400;
 }
 
 .cbulletList-9i3WnUwU4c ul li::marker,
 .cbulletList-o_e7ivYfNR ul li::marker {
   font-family: "Font Awesome 5 Free";
   color: var(--primary);
+  font-weight: bold;
   font-size: 1.2em;
-  font-weight: 700;
 }
 
-/* Buttons */
+/* ====================================
+   BUTTONS
+==================================== */
 button,
 .cbutton-STx-CdihXC,
 .cbutton-p9VpOUayG8,
@@ -84,90 +90,84 @@ button,
   font-weight: 700 !important;
   font-family: var(--headlinefont) !important;
   border: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 20px var(--glow-color);
   position: relative;
+  transition: all 0.25s ease-in-out;
   z-index: 1;
   overflow: hidden;
+  box-shadow: 0 6px 18px rgba(167, 139, 250, 0.3);
 }
 
 button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 0px 3px var(--glow-color), 0 14px 24px var(--glow-color);
+  box-shadow: 0 0 0px 2px rgba(167, 139, 250, 0.3), 0 10px 30px rgba(167, 139, 250, 0.4);
 }
 
 button::before {
-  content: "";
+  content: \"\";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 140%;
-  height: 300%;
-  background: radial-gradient(ellipse at center, var(--glow-color), transparent);
+  width: 160%;
+  height: 200%;
+  background: radial-gradient(circle, var(--glow-color), transparent 60%);
   transform: translate(-50%, -50%);
-  opacity: 0.25;
+  opacity: 0.3;
+  filter: blur(48px);
   z-index: -1;
-  filter: blur(32px);
 }
 
-.main-heading-button,
-.button-icon-start,
-.button-icon-end {
-  color: white !important;
-}
-
-/* Logo header full width white */
-#section-OCUM475QX7 {
-  background: white !important;
-  color: black !important;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  border: none;
-}
-
-/* Rounded video & shadows */
-.video-container figure,
-.video-container,
-.cvideo-40uv-KbGRV iframe {
+/* ====================================
+   VIDEO WRAPPER
+==================================== */
+.rounded-video,
+.rounded-video iframe,
+.rounded-video video {
   border-radius: 20px !important;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  background: #000;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 
-/* Section glow */
+/* ====================================
+   SECTION GLOW LAYER (subtle)
+==================================== */
 #section-uXQ_FD0Nu8 {
   position: relative;
-  overflow: visible;
   z-index: 1;
 }
 
-#section-uXQ_FD0Nu8::before {
+#section-uXQ_FD0Nu8::after {
   content: '';
   position: absolute;
-  top: -80px;
+  top: -100px;
   left: 50%;
   width: 1200px;
-  height: 800px;
+  height: 600px;
   transform: translateX(-50%);
-  background: radial-gradient(ellipse at center, var(--glow-color), transparent 70%);
-  filter: blur(140px);
-  opacity: 0.7;
-  z-index: 0;
+  background: radial-gradient(circle, var(--glow-color), transparent 70%);
+  opacity: 0.4;
+  filter: blur(100px);
   pointer-events: none;
+  z-index: 0;
 }
 
-/* Glass card look */
+/* ====================================
+   GLASS CONTAINERS
+==================================== */
 .section-uXQ_FD0Nu8 .inner,
 .row-zOtnQQ0AxG {
   background: var(--glass-bg);
-  border-radius: 20px;
-  padding: 3rem;
   backdrop-filter: blur(24px);
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
 }
 
-/* Footer */
+/* ====================================
+   FOOTER
+==================================== */
 .cparagraph-CoFamRGU-U,
 .cparagraph-tQXMyOmc-h {
   color: #a1a1aa !important;
@@ -177,33 +177,18 @@ button::before {
 
 .cparagraph-CoFamRGU-U a,
 .cparagraph-tQXMyOmc-h a {
-  color: var(--primary) !important;
-  transition: color 0.3s;
+  color: var(--primary);
+  transition: color 0.3s ease;
 }
 
 .cparagraph-CoFamRGU-U a:hover,
 .cparagraph-tQXMyOmc-h a:hover {
-  color: white !important;
+  color: white;
 }
 
-/* Animation (optional) */
-.fadeInUp {
-  animation: fadeInUp 0.6s ease forwards;
-  opacity: 0;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive tweaks */
+/* ====================================
+   RESPONSIVE
+==================================== */
 @media screen and (max-width: 480px) {
   h1, h2 { font-size: 28px !important; }
   .csub-heading-ZpivZ2zT4p,
@@ -215,6 +200,7 @@ button::before {
   .csub-heading-ZpivZ2zT4p,
   .csub-heading-dyp8bOSPnU { font-size: 20px !important; }
 }
+
 /* Hide original logo image */
 .image-container img.hl-optimized {
   display: none !important;
