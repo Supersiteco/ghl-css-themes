@@ -15,9 +15,6 @@
 
   --color-lx2qdjfj: #0e0e10;
   --color-manhk55o: #0e0e10;
-
-  --glow-color: rgba(167, 139, 250, 0.4);
-  --glass-bg: rgba(255, 255, 255, 0.025);
 }
 
 body {
@@ -32,9 +29,7 @@ body {
   color: var(--text-color);
 }
 
-/* ====================================
-   LOGO HEADER (keep white top strip)
-==================================== */
+/* LOGO HEADER */
 #section-OCUM475QX7 {
   background: white !important;
   color: black !important;
@@ -42,9 +37,7 @@ body {
   border: none;
 }
 
-/* ====================================
-   HEADINGS & TEXT
-==================================== */
+/* HEADINGS */
 h1, h2, h3,
 .cheading-0H4DJ0v8VV,
 .cheading-bduB4f6Wa2 {
@@ -53,6 +46,7 @@ h1, h2, h3,
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
+/* SUBHEADINGS */
 .csub-heading-ZpivZ2zT4p,
 .csub-heading-dyp8bOSPnU {
   color: var(--primary) !important;
@@ -61,9 +55,7 @@ h1, h2, h3,
   font-weight: 600;
 }
 
-/* ====================================
-   BULLETS
-==================================== */
+/* BULLETS */
 .cbulletList-9i3WnUwU4c,
 .cbulletList-o_e7ivYfNR {
   color: #d4d4d8 !important;
@@ -77,9 +69,7 @@ h1, h2, h3,
   font-size: 1.2em;
 }
 
-/* ====================================
-   BUTTONS
-==================================== */
+/* BUTTONS */
 button,
 .cbutton-STx-CdihXC,
 .cbutton-p9VpOUayG8,
@@ -90,10 +80,9 @@ button,
   font-weight: 700 !important;
   font-family: var(--headlinefont) !important;
   border: none;
-  position: relative;
   transition: all 0.25s ease-in-out;
+  position: relative;
   z-index: 1;
-  overflow: hidden;
   box-shadow: 0 6px 18px rgba(167, 139, 250, 0.3);
 }
 
@@ -102,23 +91,7 @@ button:hover {
   box-shadow: 0 0 0px 2px rgba(167, 139, 250, 0.3), 0 10px 30px rgba(167, 139, 250, 0.4);
 }
 
-button::before {
-  content: \"\";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 160%;
-  height: 200%;
-  background: radial-gradient(circle, var(--glow-color), transparent 60%);
-  transform: translate(-50%, -50%);
-  opacity: 0.3;
-  filter: blur(48px);
-  z-index: -1;
-}
-
-/* ====================================
-   VIDEO WRAPPER
-==================================== */
+/* VIDEO ROUNDED */
 .rounded-video,
 .rounded-video iframe,
 .rounded-video video {
@@ -127,14 +100,7 @@ button::before {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 
-/* ====================================
-   SECTION GLOW LAYER (subtle)
-==================================== */
-#section-uXQ_FD0Nu8 {
-  position: relative;
-  z-index: 1;
-}
-
+/* SECTION GLOW */
 #section-uXQ_FD0Nu8::after {
   content: '';
   position: absolute;
@@ -143,31 +109,14 @@ button::before {
   width: 1200px;
   height: 600px;
   transform: translateX(-50%);
-  background: radial-gradient(circle, var(--glow-color), transparent 70%);
+  background: radial-gradient(circle, rgba(167,139,250,0.4), transparent 70%);
   opacity: 0.4;
   filter: blur(100px);
   pointer-events: none;
   z-index: 0;
 }
 
-/* ====================================
-   GLASS CONTAINERS
-==================================== */
-.section-uXQ_FD0Nu8 .inner,
-.row-zOtnQQ0AxG {
-  background: var(--glass-bg);
-  backdrop-filter: blur(24px);
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 3rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-  position: relative;
-  z-index: 2;
-}
-
-/* ====================================
-   FOOTER
-==================================== */
+/* FOOTER */
 .cparagraph-CoFamRGU-U,
 .cparagraph-tQXMyOmc-h {
   color: #a1a1aa !important;
@@ -186,9 +135,7 @@ button::before {
   color: white;
 }
 
-/* ====================================
-   RESPONSIVE
-==================================== */
+/* RESPONSIVE */
 @media screen and (max-width: 480px) {
   h1, h2 { font-size: 28px !important; }
   .csub-heading-ZpivZ2zT4p,
