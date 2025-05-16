@@ -3,8 +3,8 @@
   --secondary: #24a148;
   --text-color: #121212;
   --link-color: #24a148;
-  --headlinefont: 'Inter', sans-serif;
-  --contentfont: 'Inter', sans-serif;
+  --headlinefont: 'Poppins', sans-serif;
+  --contentfont: 'Poppins', sans-serif;
 
   /* Override all icon + bullet colors used by GHL */
   --color-mangpfqn: #24a148;
@@ -17,7 +17,7 @@
   --color-manhk55o: #f5fff8;
 }
 
-/* Ensure fonts are Inter everywhere */
+/* Ensure fonts are Poppins everywhere */
 body,
 .hl_page-preview--content,
 h1, h2, h3, h4, h5, h6,
@@ -126,3 +126,4 @@ button,
 
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
