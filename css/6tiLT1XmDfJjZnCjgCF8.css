@@ -1,45 +1,43 @@
-/* Import font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  /* === Brand Colors === */
-  --primary: #3a86ff;                    /* Linear-style vibrant blue */
-  --secondary: #3a86ff;
+  /* === Linear-Inspired Brand Colors === */
+  --primary: #5e6ad2;         /* Linear's accent blue */
+  --secondary: #3c3c3c;       /* Dark gray for secondary emphasis */
   --link-color: var(--primary);
 
-  /* === Typography === */
-  --headlinefont: 'Poppins', sans-serif;
-  --contentfont: 'Poppins', sans-serif;
+  /* === Text & Font === */
+  --text-color: #1d1d1f;       /* Linear's neutral body text */
+  --headlinefont: 'Inter', sans-serif;
+  --contentfont: 'Inter', sans-serif;
 
-  /* === Text & Background === */
-  --text-color: #1e1e1e;
-
-  /* === Builder-Specific Variables (preserved names, updated values) === */
+  /* === Builder Specific Variables (unchanged names, updated colors) === */
   --color-mangpfqn: var(--primary);
-  --color-manhlbck: #1e1e1e;
-  --color-manhmc8r: #1e1e1e;
-  --color-manhn5b1: #1e1e1e;
-  --color-lx2qdjfj: #f5f6f8;
-  --color-manhk55o: #f5f6f8;
+  --color-manhlbck: #3d3d3f;
+  --color-manhmc8r: #4e4e50;
+  --color-manhn5b1: #6d6d72;
+  --color-lx2qdjfj: #f3f4f6;   /* Light background block */
+  --color-manhk55o: #f3f4f6;
 }
 
-/* === Base styles === */
+/* === Global enhancements === */
 body {
-  background: #f5f6f8;
+  background-color: var(--color-lx2qdjfj);
   color: var(--text-color);
-  font-family: var(--headlinefont);
-  font-smoothing: antialiased;
+  font-family: var(--contentfont);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  padding: 4rem 0;
-  margin: 0;
+  font-size: 16px;
 }
 
-/* === Main content container === */
+/* === Elevation style === */
 .hl_page-preview--content {
-  background: #ffffff;
-  padding: 3rem 4rem;
+  background-color: white;
   border-radius: 16px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(0, 0, 0, 0.06);
+  padding: 3rem;
   max-width: 1100px;
   margin: 0 auto;
   transition: box-shadow 0.3s ease;
@@ -49,23 +47,12 @@ body {
 h1, h2, h3,
 .cheading-0H4DJ0v8VV,
 .cheading-bduB4f6Wa2 {
+  font-family: var(--headlinefont);
   font-weight: 700;
   color: var(--primary) !important;
   letter-spacing: -0.02em;
   line-height: 1.2;
-  margin-bottom: 1rem;
-  animation: fadeUpHead 0.6s ease both;
-}
-
-@keyframes fadeUpHead {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  margin-bottom: 0.75em;
 }
 
 /* === Subheadings === */
@@ -73,43 +60,19 @@ h1, h2, h3,
 .csub-heading-ZpivZ2zT4p,
 .csub-heading-dyp8bOSPnU,
 .csub-heading-fw_eVymZ7R {
+  font-family: var(--headlinefont);
   font-weight: 600;
-  font-size: 0.875rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: var(--primary) !important;
-  margin-bottom: 0.5rem;
-  font-family: var(--headlinefont) !important;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-/* === Paragraph text === */
+/* === Paragraphs === */
 .hl_page-preview--content p {
   font-size: 1.125rem;
   line-height: 1.7;
-  color: #444;
-  margin-bottom: 1rem;
-}
-
-/* === Bullet lists === */
-.cbulletList-9i3WnUwU4c ul,
-.cbulletList-o_e7ivYfNR ul {
-  padding-left: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.cbulletList-9i3WnUwU4c li,
-.cbulletList-o_e7ivYfNR li {
-  margin-bottom: 0.75rem;
-  font-family: var(--headlinefont);
-  color: var(--text-color) !important;
-}
-
-.cbulletList-9i3WnUwU4c ul li::marker,
-.cbulletList-o_e7ivYfNR ul li::marker {
-  color: var(--primary) !important;
-  font-size: 1.2em;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 700;
+  color: #333;
 }
 
 /* === Buttons === */
@@ -120,34 +83,50 @@ button,
 .hl_page-preview--content button {
   background-color: var(--primary) !important;
   color: white !important;
-  padding: 1.25rem 2.5rem;
-  font-size: 1.125rem;
-  border-radius: 999px !important;
-  font-weight: 600 !important;
-  font-family: var(--headlinefont) !important;
-  border: none !important;
+  font-family: var(--headlinefont);
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(58, 134, 255, 0.2);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(58, 134, 255, 0.3);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.08),
+    0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-/* === Button icon text === */
+/* Button icon text */
 .button-icon-start,
 .button-icon-end {
   color: white !important;
 }
 
+/* === Lists === */
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  font-family: var(--contentfont);
+  color: var(--text-color);
+}
+
+ul li::marker {
+  color: var(--primary);
+  font-weight: bold;
+}
+
 /* === Inputs === */
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="tel"],
-input[type="number"],
-input[type="password"],
+input,
 textarea,
 select {
   font-family: var(--contentfont);
@@ -165,22 +144,16 @@ input:focus,
 textarea:focus,
 select:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
+  box-shadow: 0 0 0 3px rgba(94, 106, 210, 0.2);
   outline: none;
 }
 
-/* === Placeholder text === */
-::placeholder {
-  color: #9ca3af;
-  opacity: 1;
-}
-
-/* === Links with hover underline === */
+/* === Links === */
 a {
   color: var(--link-color);
   text-decoration: none;
+  transition: all 0.2s ease;
   position: relative;
-  transition: color 0.2s ease;
 }
 
 a::after {
@@ -200,21 +173,26 @@ a:hover::after {
   transform: scaleX(1);
 }
 
-/* === Divider line === */
-hr {
-  border: none;
-  height: 1px;
-  background: linear-gradient(to right, transparent, #ccc, transparent);
-  margin: 2rem 0;
+/* === Fade-in animation for content === */
+.hl_page-preview--content > * {
+  animation: fadeIn 0.5s ease both;
 }
 
-/* === Tooltip label (optional) === */
-label[data-tooltip]::after {
-  content: attr(data-tooltip);
-  margin-left: 0.5rem;
-  font-size: 0.75rem;
-  color: #888;
-  font-style: italic;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Placeholder text === */
+::placeholder {
+  color: #9ca3af;
+  opacity: 1;
 }
 
 /* === Scrollbar === */
@@ -222,43 +200,6 @@ label[data-tooltip]::after {
   width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
-
-/* === Responsive Headings === */
-@media screen and (max-width: 480px) {
-  h1, h2 {
-    font-size: 28px !important;
-  }
-
-  .sub-heading,
-  .csub-heading-ZpivZ2zT4p,
-  .csub-heading-dyp8bOSPnU {
-    font-size: 20px !important;
-  }
-}
-
-@media screen and (min-width: 481px) {
-  h1, h2 {
-    font-size: 36px !important;
-  }
-
-  .sub-heading,
-  .csub-heading-ZpivZ2zT4p,
-  .csub-heading-dyp8bOSPnU {
-    font-size: 22px !important;
-  }
-}
-
-/* === Logo Replacement === */
-.image-container img.hl-optimized {
-  display: none !important;
-}
-
-.image-container::before {
-  content: '';
-  display: inline-block;
-  width: 158px;
-  height: 20px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='158' height='20' viewBox='0 0 158 20' fill='black'><path d='M0 0.711548H4.97337V15.1461H13.7597V18.8819H0V0.711548Z'/><path d='M15.6504 0.711548H20.6237V18.8819H15.6504V0.711548Z'/><path d
