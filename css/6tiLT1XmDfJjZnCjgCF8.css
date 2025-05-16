@@ -1,60 +1,37 @@
-/* Import font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-  --primary: #5e6ad2;
-  --secondary: #3c3f4a;
-  --text-color: #0e0f12;
-  --link-color: #5e6ad2;
-
+  --primary: #0C67C2;
+  --secondary: #0038FF;
+  --text-color: #121212;
+  --link-color: var(--primary);
   --headlinefont: 'Poppins', sans-serif;
   --contentfont: 'Poppins', sans-serif;
-
-  --color-mangpfqn: var(--primary);
-  --color-manhlbck: #2e2e32;
-  --color-manhmc8r: #3a3a40;
-  --color-manhn5b1: #7b7b8d;
-
-  --color-lx2qdjfj: #f7f8f9;
-  --color-manhk55o: #f7f8f9;
+  --glow-color: rgba(12, 103, 194, 0.3);
 }
 
 /* Global font */
 body,
 .hl_page-preview--content,
-h1, h2, h3, h4, h5, h6,
 .hl_page-preview--content * {
   font-family: var(--headlinefont) !important;
-  color: var(--text-color);
 }
 
-/* Subheadings */
-.c-sub-heading,
+/* Headings and Subheadings */
+h1, h2, h3 {
+  color: var(--text-color) !important;
+  font-weight: 700 !important;
+}
 .csub-heading-ZpivZ2zT4p,
-.csub-heading-dyp8bOSPnU,
-.csub-heading-fw_eVymZ7R {
+.csub-heading-dyp8bOSPnU {
   color: var(--primary) !important;
-  font-family: var(--headlinefont) !important;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* Headings */
-h1, h2, h3,
-.cheading-0H4DJ0v8VV,
-.cheading-bduB4f6Wa2 {
-  color: var(--primary) !important;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  line-height: 1.2;
+  font-weight: 600 !important;
 }
 
 /* Bullet text */
 .cbulletList-9i3WnUwU4c,
 .cbulletList-o_e7ivYfNR {
   color: var(--text-color) !important;
-  font-family: var(--headlinefont) !important;
 }
 
 /* Bullet icons */
@@ -63,43 +40,25 @@ h1, h2, h3,
   font-family: "Font Awesome 5 Free";
   color: var(--primary) !important;
   font-weight: 700;
-  font-size: 1.4em;
-  filter: drop-shadow(0 0 1px var(--primary));
 }
 
-/* Buttons */
-button,
+/* Button styles */
 .cbutton-STx-CdihXC,
 .cbutton-p9VpOUayG8,
-.cbutton-AckeidhSQ9,
 .hl_page-preview--content button {
   background-color: var(--primary) !important;
-  color: white !important;
+  color: #ffffff !important;
   border-radius: 100px !important;
-  border: none !important;
-  font-weight: bold !important;
-  font-family: var(--headlinefont) !important;
-  transition: all 0.25s ease-in-out;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 5px 20px rgba(0,0,0,0.08);
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  isolation: isolate;
+  font-weight: 700 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 0 0 transparent;
 }
 
-/* Button text inside GHL */
-.main-heading-button {
-  color: white !important;
-  position: relative;
-  z-index: 2;
-}
-
-/* Optional: subtle inner glow effect */
-button:hover,
+/* Button hover with glow */
 .cbutton-STx-CdihXC:hover,
 .cbutton-p9VpOUayG8:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08), 0 12px 28px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0px 4px var(--glow-color), 0 0 20px var(--glow-color);
+  transform: scale(1.02);
 }
 
 /* Button icon text */
@@ -108,28 +67,46 @@ button:hover,
   color: white !important;
 }
 
-/* Responsive headings */
+/* Background SVG glow effect (behind section) */
+#section-uXQ_FD0Nu8::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  width: 480px;
+  height: 480px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, var(--glow-color), transparent 70%);
+  z-index: 0;
+  filter: blur(60px);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Section positioning fix to allow layering */
+#section-uXQ_FD0Nu8 {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Responsive typography */
 @media screen and (max-width: 480px) {
   h1, h2 {
     font-size: 28px !important;
   }
-
-  .sub-heading,
   .csub-heading-ZpivZ2zT4p,
   .csub-heading-dyp8bOSPnU {
-    font-size: 20px !important;
+    font-size: 18px !important;
   }
 }
-
 @media screen and (min-width: 481px) {
   h1, h2 {
     font-size: 36px !important;
   }
-
-  .sub-heading,
   .csub-heading-ZpivZ2zT4p,
   .csub-heading-dyp8bOSPnU {
-    font-size: 22px !important;
+    font-size: 20px !important;
   }
 }
 
