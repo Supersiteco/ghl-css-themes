@@ -2,63 +2,117 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-  --primary: #24a148;
-  --secondary: #24a148;
-  --text-color: #121212;
-  --link-color: #24a148;
+  /* === Brand Colors === */
+  --primary: #3a86ff;                    /* Linear-style vibrant blue */
+  --secondary: #3a86ff;
+  --link-color: var(--primary);
+
+  /* === Typography === */
   --headlinefont: 'Poppins', sans-serif;
   --contentfont: 'Poppins', sans-serif;
 
-  --color-mangpfqn: #24a148;
-  --color-manhlbck: #2a2a2a;
-  --color-manhmc8r: #2a2a2a;
-  --color-manhn5b1: #2a2a2a;
+  /* === Text & Background === */
+  --text-color: #1e1e1e;
 
-  --color-lx2qdjfj: #f5fff8;
-  --color-manhk55o: #f5fff8;
+  /* === Builder-Specific Variables (preserved names, updated values) === */
+  --color-mangpfqn: var(--primary);
+  --color-manhlbck: #1e1e1e;
+  --color-manhmc8r: #1e1e1e;
+  --color-manhn5b1: #1e1e1e;
+  --color-lx2qdjfj: #f5f6f8;
+  --color-manhk55o: #f5f6f8;
 }
 
-/* Global font */
-body,
-.hl_page-preview--content,
-h1, h2, h3, h4, h5, h6,
-.hl_page-preview--content * {
-  font-family: var(--headlinefont) !important;
+/* === Base styles === */
+body {
+  background: #f5f6f8;
+  color: var(--text-color);
+  font-family: var(--headlinefont);
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  padding: 4rem 0;
+  margin: 0;
 }
 
-/* Subheadings */
+/* === Main content container === */
+.hl_page-preview--content {
+  background: #ffffff;
+  padding: 3rem 4rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+  max-width: 1100px;
+  margin: 0 auto;
+  transition: box-shadow 0.3s ease;
+}
+
+/* === Headings === */
+h1, h2, h3,
+.cheading-0H4DJ0v8VV,
+.cheading-bduB4f6Wa2 {
+  font-weight: 700;
+  color: var(--primary) !important;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  animation: fadeUpHead 0.6s ease both;
+}
+
+@keyframes fadeUpHead {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Subheadings === */
 .c-sub-heading,
 .csub-heading-ZpivZ2zT4p,
 .csub-heading-dyp8bOSPnU,
 .csub-heading-fw_eVymZ7R {
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--primary) !important;
+  margin-bottom: 0.5rem;
   font-family: var(--headlinefont) !important;
 }
 
-/* Headings */
-h1, h2, h3,
-.cheading-0H4DJ0v8VV,
-.cheading-bduB4f6Wa2 {
-  color: var(--primary) !important;
-  font-weight: 700;
+/* === Paragraph text === */
+.hl_page-preview--content p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 1rem;
 }
 
-/* Bullet text */
-.cbulletList-9i3WnUwU4c,
-.cbulletList-o_e7ivYfNR {
+/* === Bullet lists === */
+.cbulletList-9i3WnUwU4c ul,
+.cbulletList-o_e7ivYfNR ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cbulletList-9i3WnUwU4c li,
+.cbulletList-o_e7ivYfNR li {
+  margin-bottom: 0.75rem;
+  font-family: var(--headlinefont);
   color: var(--text-color) !important;
-  font-family: var(--headlinefont) !important;
 }
 
-/* Bullet icons */
 .cbulletList-9i3WnUwU4c ul li::marker,
 .cbulletList-o_e7ivYfNR ul li::marker {
-  font-family: "Font Awesome 5 Free";
   color: var(--primary) !important;
+  font-size: 1.2em;
+  font-family: "Font Awesome 5 Free";
   font-weight: 700;
 }
 
-/* Buttons */
+/* === Buttons === */
 button,
 .cbutton-STx-CdihXC,
 .cbutton-p9VpOUayG8,
@@ -66,19 +120,113 @@ button,
 .hl_page-preview--content button {
   background-color: var(--primary) !important;
   color: white !important;
-  border-radius: 100px !important;
-  border: none !important;
-  font-weight: bold !important;
+  padding: 1.25rem 2.5rem;
+  font-size: 1.125rem;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
   font-family: var(--headlinefont) !important;
+  border: none !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(58, 134, 255, 0.2);
 }
 
-/* Button icon text */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(58, 134, 255, 0.3);
+}
+
+/* === Button icon text === */
 .button-icon-start,
 .button-icon-end {
   color: white !important;
 }
 
-/* Responsive headings */
+/* === Inputs === */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+textarea,
+select {
+  font-family: var(--contentfont);
+  font-size: 1rem;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
+  outline: none;
+}
+
+/* === Placeholder text === */
+::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+/* === Links with hover underline === */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--link-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+
+/* === Divider line === */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ccc, transparent);
+  margin: 2rem 0;
+}
+
+/* === Tooltip label (optional) === */
+label[data-tooltip]::after {
+  content: attr(data-tooltip);
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+  color: #888;
+  font-style: italic;
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+/* === Responsive Headings === */
 @media screen and (max-width: 480px) {
   h1, h2 {
     font-size: 28px !important;
@@ -103,18 +251,14 @@ button,
   }
 }
 
-/* Hide original logo image */
+/* === Logo Replacement === */
 .image-container img.hl-optimized {
   display: none !important;
 }
 
-/* Insert replacement SVG */
 .image-container::before {
   content: '';
   display: inline-block;
   width: 158px;
   height: 20px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='158' height='20' viewBox='0 0 158 20' fill='black'><path d='M0 0.711548H4.97337V15.1461H13.7597V18.8819H0V0.711548Z'/><path d='M15.6504 0.711548H20.6237V18.8819H15.6504V0.711548Z'/><path d='M58.9089 0.711548H63.8823V8.08133L70.7621 0.711548H76.5644L69.0491 8.71665L76.8407 18.8819H71.0384L65.8716 11.9949L63.8823 14.0788V18.8819H58.9089V0.711548Z'/><path d='M78.1742 18.8819V0.711548H83.1476L90.0551 11.5121H90.1103V0.711548H95.0837V18.8819H90.1103L83.2029 8.08133H83.1476V18.8819H78.1742Z'/><path d='M24.1461 18.8852V0.714845H29.1195L51.9801 11.5154H52.0354V0.714845H57.0088V18.8852H52.0354L29.1748 8.08462H29.1195V18.8852H24.1461Z'/><path d='M138.217 12.8336C138.217 16.3406 136.863 19.2885 131.447 19.2885C126.032 19.2885 124.678 16.3406 124.678 12.8336V11.3088H129.099V12.8336C129.099 14.5616 129.541 15.5528 131.171 15.5528C132.801 15.5528 133.243 14.5616 133.243 12.8336V0.711548H138.217V12.8336Z'/><path d='M151.66 15.0953H144.89L143.619 18.8819H138.646L145.802 0.711548H150.775L157.904 18.8819H152.93L151.66 15.0953ZM146.023 11.6137H150.554L148.316 4.9047H148.261L146.023 11.6137Z'/><path d='M105.613 18.8819V0.711548H110.586L117.494 11.5121H117.549V0.711548H122.522V18.8819H117.549L110.642 8.08133H110.586V18.8819H105.613Z'/><path d='M97.6725 0.712556H102.646V18.8829H97.6725V0.712556Z'/></svg>");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='158' height='20' viewBox='0 0 158 20' fill='black'><path d='M0 0.711548H4.97337V15.1461H13.7597V18.8819H0V0.711548Z'/><path d='M15.6504 0.711548H20.6237V18.8819H15.6504V0.711548Z'/><path d
