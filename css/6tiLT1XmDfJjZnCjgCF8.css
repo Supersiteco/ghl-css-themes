@@ -4,7 +4,7 @@
   --primary: #000000;
   --secondary: #CEF17B;
   --text-color: #000000;
-  --link-color: #4d4d4d;
+  --link-color: #8C8C8C;
   --headlinefont: 'Inter', sans-serif;
   --contentfont: 'Inter', sans-serif;
 
@@ -17,13 +17,12 @@
   --color-manhk55o: #ffffff;
 }
 
-/* === GLOBAL === */
-body {
-  background: #ffffff !important;
-  font-family: var(--headlinefont) !important;
-  color: var(--text-color);
+html, body {
   overflow-x: hidden;
-  overflow-y: auto;
+  max-width: 100vw;
+  background: #ffffff !important;
+  font-family: var(--headlinefont);
+  color: var(--text-color);
 }
 
 .hl_page-preview--content,
@@ -125,17 +124,27 @@ button:hover {
   left: 50%;
   transform: translateX(-50%);
   width: 1200px;
-  height: 600px;
+  height: 800px;
   background: radial-gradient(circle at center, rgba(206, 241, 123, 0.35), transparent 50%);
-  filter: blur(100px);
+  filter: blur(120px);
   opacity: 1;
   pointer-events: none;
   z-index: 1;
+  max-width: 100vw;
   max-height: 100vh;
-  overflow: hidden;
 }
 
-/* === LINKS === */
+@media screen and (max-width: 768px) {
+  .vsl_hero::before {
+    width: 100vw;
+    height: 400px;
+    top: -100px;
+    background: radial-gradient(circle at center, rgba(206, 241, 123, 0.3), transparent 60%);
+    filter: blur(60px);
+  }
+}
+
+/* === LINK STYLES === */
 a,
 .hl_page-preview--content a {
   position: relative;
@@ -167,17 +176,21 @@ a:hover::after {
   color: #4d4d4d !important;
   font-size: 14px;
   text-align: center;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .cparagraph-CoFamRGU-U a,
 .cparagraph-tQXMyOmc-h a {
-  color: var(--link-color) !important;
+  color: #6a6a6a !important;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .cparagraph-CoFamRGU-U a:hover,
 .cparagraph-tQXMyOmc-h a:hover {
   color: #91b15a !important;
+  text-decoration: underline;
 }
 
 /* === RESPONSIVE HEADINGS === */
