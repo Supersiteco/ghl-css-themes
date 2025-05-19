@@ -156,23 +156,18 @@ a:hover::after {
   transform: scaleX(1);
 }
 
-/* === FOOTER === */
+/* FOOTER STYLES */
 .cparagraph-CoFamRGU-U,
 .cparagraph-tQXMyOmc-h {
-  color: #4d4d4d !important;
+  color: #777 !important;
   font-size: 14px;
   text-align: center;
 }
 
 .cparagraph-CoFamRGU-U a,
 .cparagraph-tQXMyOmc-h a {
-  color: #91b15a !important;
-  transition: color 0.3s ease;
-}
-
-.cparagraph-CoFamRGU-U a:hover,
-.cparagraph-tQXMyOmc-h a:hover {
   color: var(--primary);
+  transition: color 0.3s ease;
 }
 
 /* === RESPONSIVE HEADINGS === */
