@@ -4,7 +4,7 @@
   --primary: #000000;
   --secondary: #CEF17B;
   --text-color: #000000;
-  --link-color: #8C8C8C;
+  --link-color: #4d4d4d;
   --headlinefont: 'Inter', sans-serif;
   --contentfont: 'Inter', sans-serif;
 
@@ -17,10 +17,13 @@
   --color-manhk55o: #ffffff;
 }
 
+/* === GLOBAL === */
 body {
   background: #ffffff !important;
-  font-family: var(--headlinefont);
+  font-family: var(--headlinefont) !important;
   color: var(--text-color);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .hl_page-preview--content,
@@ -122,15 +125,17 @@ button:hover {
   left: 50%;
   transform: translateX(-50%);
   width: 1200px;
-  height: 800px;
+  height: 600px;
   background: radial-gradient(circle at center, rgba(206, 241, 123, 0.35), transparent 50%);
-  filter: blur(120px);
+  filter: blur(100px);
   opacity: 1;
   pointer-events: none;
   z-index: 1;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
-/* === LINK STYLES === */
+/* === LINKS === */
 a,
 .hl_page-preview--content a {
   position: relative;
@@ -156,18 +161,23 @@ a:hover::after {
   transform: scaleX(1);
 }
 
-/* FOOTER STYLES */
+/* === FOOTER === */
 .cparagraph-CoFamRGU-U,
 .cparagraph-tQXMyOmc-h {
-  color: #777 !important;
+  color: #4d4d4d !important;
   font-size: 14px;
   text-align: center;
 }
 
 .cparagraph-CoFamRGU-U a,
 .cparagraph-tQXMyOmc-h a {
-  color: var(--primary);
+  color: var(--link-color) !important;
   transition: color 0.3s ease;
+}
+
+.cparagraph-CoFamRGU-U a:hover,
+.cparagraph-tQXMyOmc-h a:hover {
+  color: #91b15a !important;
 }
 
 /* === RESPONSIVE HEADINGS === */
