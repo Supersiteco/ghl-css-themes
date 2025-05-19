@@ -106,23 +106,23 @@ button:hover {
 }
 
 /* === STATIC GLOW (VISIBLE) === */
-#vsl_hero {
-  position: relative !important;
-  z-index: 2 !important;
-  overflow: visible !important;
+.vsl_hero {
+  position: relative;
+  z-index: 2;
+  overflow: visible;
 }
 
-#vsl_hero::after {
+.vsl_hero::before {
   content: '';
   position: absolute;
-  top: -180px;
+  top: -200px;
   left: 50%;
   transform: translateX(-50%);
-  width: 1000px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(206, 241, 123, 0.3), transparent 70%);
+  width: 1200px;
+  height: 800px;
+  background: radial-gradient(circle at center, rgba(206, 241, 123, 0.35), transparent 70%);
+  filter: blur(120px);
   opacity: 1;
-  filter: blur(100px);
   pointer-events: none;
   z-index: 1;
 }
