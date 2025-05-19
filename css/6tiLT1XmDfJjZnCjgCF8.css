@@ -4,7 +4,7 @@
   --primary: #000000;
   --secondary: #CEF17B;
   --text-color: #000000;
-  --link-color: #7ea633;
+  --link-color: #607A29;
   --headlinefont: 'Inter', sans-serif;
   --contentfont: 'Inter', sans-serif;
 
@@ -12,6 +12,7 @@
   --color-manhlbck: #d4d4d4;
   --color-manhmc8r: #e5e5e5;
   --color-manhn5b1: #f4f4f5;
+
   --color-lx2qdjfj: #ffffff;
   --color-manhk55o: #ffffff;
 }
@@ -20,18 +21,16 @@ body {
   background: #ffffff !important;
   font-family: var(--headlinefont);
   color: var(--text-color);
-  position: relative;
-  z-index: 1;
 }
 
-/* Ensure all content uses Inter */
+/* Typography Reset */
 .hl_page-preview--content,
 .hl_page-preview--content * {
   font-family: var(--headlinefont) !important;
   color: var(--text-color);
 }
 
-/* Header area */
+/* Logo Header */
 #section-OCUM475QX7 {
   background: white !important;
   color: black !important;
@@ -57,11 +56,12 @@ h1, h2, h3,
   letter-spacing: 0.1em;
 }
 
-/* Bullet list */
+/* Bullet Lists */
 .cbulletList-9i3WnUwU4c,
 .cbulletList-o_e7ivYfNR {
   color: #444 !important;
 }
+
 .cbulletList-9i3WnUwU4c ul li::marker,
 .cbulletList-o_e7ivYfNR ul li::marker {
   font-family: "Font Awesome 5 Free";
@@ -70,13 +70,12 @@ h1, h2, h3,
   font-size: 1.2em;
 }
 
-/* Button styles */
+/* Button Styling */
 button,
 .cbutton-STx-CdihXC,
 .cbutton-p9VpOUayG8,
 .hl_page-preview--content button {
   background-color: var(--primary) !important;
-  color: #fff !important;
   border-radius: 100px !important;
   border: none !important;
   font-weight: 700 !important;
@@ -86,6 +85,7 @@ button,
   z-index: 1;
   transition: all 0.3s ease;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  color: #fff !important;
 }
 
 .main-heading-button {
@@ -97,21 +97,18 @@ button:hover {
   box-shadow: 0 0 0px 2px rgba(0, 0, 0, 0.2), 0 12px 36px rgba(0, 0, 0, 0.3);
 }
 
-/* VIDEO FRAME fix for iframe shrinking + radius */
-.video_frame {
+/* Video Styling */
+.video_frame,
+.video_frame iframe,
+.video_frame video {
   border-radius: 20px !important;
-  overflow: hidden !important;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.15);
   width: 100% !important;
-}
-.video_frame iframe {
-  border-radius: 20px !important;
-  width: 100% !important;
-  aspect-ratio: 16 / 9;
-  display: block;
+  height: 100% !important;
 }
 
-/* Glow background for hero section */
+/* Hero Glow — Enhanced Static Lime Glow */
 #section-uXQ_FD0Nu8 {
   position: relative;
   z-index: 1;
@@ -119,64 +116,19 @@ button:hover {
 #section-uXQ_FD0Nu8::after {
   content: '';
   position: absolute;
-  top: -180px;
+  top: -150px;
   left: 50%;
-  width: 1400px;
-  height: 1000px;
+  width: 1000px;
+  height: 800px;
   transform: translateX(-50%);
-  background: radial-gradient(ellipse at center, rgba(206, 241, 123, 0.3), transparent 70%);
+  background: radial-gradient(circle at center, rgba(206, 241, 123, 0.35), transparent 70%);
   opacity: 1;
   filter: blur(120px);
   pointer-events: none;
   z-index: 0;
 }
 
-/* Pulse glow on body */
-body::before {
-  content: "";
-  position: fixed;
-  top: -20%;
-  left: -10%;
-  width: 1200px;
-  height: 1200px;
-  background: radial-gradient(circle at 30% 30%, rgba(206, 241, 123, 0.12), transparent 60%);
-  animation: pulseBlob 8s ease-in-out infinite alternate;
-  filter: blur(120px);
-  pointer-events: none;
-  z-index: 0;
-}
-
-@keyframes pulseBlob {
-  0% {
-    transform: translate(0, 0) scale(1);
-    opacity: 0.4;
-  }
-  100% {
-    transform: translate(50px, 80px) scale(1.2);
-    opacity: 0.6;
-  }
-}
-
-/* Footer */
-.cparagraph-CoFamRGU-U,
-.cparagraph-tQXMyOmc-h {
-  color: #777 !important;
-  font-size: 14px;
-  text-align: center;
-}
-
-.cparagraph-CoFamRGU-U a,
-.cparagraph-tQXMyOmc-h a {
-  color: var(--link-color);
-  transition: color 0.3s ease;
-}
-
-.cparagraph-CoFamRGU-U a:hover,
-.cparagraph-tQXMyOmc-h a:hover {
-  color: #000 !important;
-}
-
-/* Links animated underline */
+/* Animated Link Underline */
 a {
   position: relative;
   color: var(--link-color);
@@ -199,7 +151,20 @@ a:hover::after {
   transform: scaleX(1);
 }
 
-/* Responsive tweaks */
+/* Footer Contrast Improvement */
+.cparagraph-CoFamRGU-U,
+.cparagraph-tQXMyOmc-h {
+  color: #555 !important;
+  font-size: 14px;
+  text-align: center;
+}
+.cparagraph-CoFamRGU-U a,
+.cparagraph-tQXMyOmc-h a {
+  color: var(--link-color);
+  transition: color 0.3s ease;
+}
+
+/* Responsive Typography */
 @media screen and (max-width: 480px) {
   h1, h2 {
     font-size: 28px !important;
@@ -209,6 +174,7 @@ a:hover::after {
     font-size: 16px !important;
   }
 }
+
 @media screen and (min-width: 481px) {
   h1, h2 {
     font-size: 36px !important;
