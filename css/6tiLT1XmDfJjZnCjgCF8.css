@@ -170,8 +170,8 @@ a:hover::after {
   transform: scaleX(1);
 }
 
-/* === FOOTER === */
-.cparagraph-ueH6UhDFBU {
+/* === FOOTER PARAGRAPH + LINKS (Scoped to Footer Container) === */
+.minimal_footer [class^="cparagraph-"] {
   color: #4d4d4d !important;
   font-size: 14px;
   text-align: center;
@@ -179,14 +179,13 @@ a:hover::after {
   margin-bottom: 0 !important;
 }
 
-.cparagraph-xqGgbMWZE1 a {
-  color: #6a6a6a !important;
+.minimal_footer [class^="cparagraph-"] a {
+  color: var(--link-color) !important;
   transition: color 0.3s ease;
   text-decoration: none;
 }
 
-.cparagraph-CoFamRGU-U a:hover,
-.cparagraph-tQXMyOmc-h a:hover {
+.minimal_footer [class^="cparagraph-"] a:hover {
   color: #91b15a !important;
   text-decoration: underline;
 }
