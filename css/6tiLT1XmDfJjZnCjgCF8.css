@@ -1,108 +1,116 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 :root {
-  --primary: #a78bfa;
-  --secondary: #7c3aed;
-  --text-color: #ffffff;
-  --link-color: var(--primary);
+  --primary: #000000;
+  --secondary: #CEF17B;
+  --text-color: #000000;
+  --link-color: var(--secondary);
   --headlinefont: 'Inter', sans-serif;
   --contentfont: 'Inter', sans-serif;
 
-  --color-mangpfqn: var(--primary);
-  --color-manhlbck: #e4e4e7;
-  --color-manhmc8r: #a1a1aa;
-  --color-manhn5b1: #71717a;
+  --color-mangpfqn: var(--secondary);
+  --color-manhlbck: #d4d4d4;
+  --color-manhmc8r: #e5e5e5;
+  --color-manhn5b1: #f4f4f5;
 
-  --color-lx2qdjfj: #0f0f11;
-  --color-manhk55o: #0f0f11;
+  --color-lx2qdjfj: #ffffff;
+  --color-manhk55o: #ffffff;
 }
 
 body {
-  background: radial-gradient(circle at top left, #1e1b2e 0%, #0f0e16 100%) !important;
+  background: #ffffff !important;
   font-family: var(--headlinefont);
   color: var(--text-color);
+  position: relative;
+  z-index: 0;
 }
 
-/* Preserve Layout-safe Styling */
 .hl_page-preview--content,
 .hl_page-preview--content * {
   font-family: var(--headlinefont) !important;
   color: var(--text-color);
 }
 
-/* Logo Header */
+/* LOGO HEADER */
 #section-OCUM475QX7 {
   background: white !important;
   color: black !important;
-  border: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid var(--color-manhlbck);
+  box-shadow: none;
 }
 
-/* Headings */
+/* HEADINGS */
 h1, h2, h3,
 .cheading-0H4DJ0v8VV,
 .cheading-bduB4f6Wa2 {
-  color: white !important;
+  color: #000 !important;
   font-weight: 700;
   letter-spacing: -0.01em;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Subheadings */
+/* SUBHEADINGS */
 .csub-heading-ZpivZ2zT4p,
 .csub-heading-dyp8bOSPnU {
-  color: var(--primary) !important;
+  color: var(--secondary) !important;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
 }
 
-/* Bullets */
+/* BULLETS */
 .cbulletList-9i3WnUwU4c,
 .cbulletList-o_e7ivYfNR {
-  color: #d4d4d8 !important;
+  color: #444 !important;
 }
 
 .cbulletList-9i3WnUwU4c ul li::marker,
 .cbulletList-o_e7ivYfNR ul li::marker {
   font-family: "Font Awesome 5 Free";
   font-weight: 700;
-  color: var(--primary);
+  color: var(--secondary);
   font-size: 1.2em;
 }
 
-/* Button Styles */
+/* BUTTON STYLES */
 button,
 .cbutton-STx-CdihXC,
 .cbutton-p9VpOUayG8,
 .hl_page-preview--content button {
   background-color: var(--primary) !important;
-  color: white !important;
   border-radius: 100px !important;
+  border: none !important;
   font-weight: 700 !important;
   font-family: var(--headlinefont) !important;
-  border: none;
-  transition: all 0.3s ease;
   position: relative;
+  overflow: hidden;
   z-index: 1;
-  box-shadow: 0 6px 18px rgba(167, 139, 250, 0.3);
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  color: #fff !important;
+}
+
+.main-heading-button {
+  color: #fff !important;
 }
 
 button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 0px 2px rgba(167, 139, 250, 0.3), 0 12px 36px rgba(167, 139, 250, 0.5);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 0px 2px rgba(0, 0, 0, 0.2), 0 12px 36px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive Video Radius */
+/* VIDEO ROUNDED - updated for column compatibility */
 .rounded-video,
 .rounded-video iframe,
 .rounded-video video {
   border-radius: 20px !important;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-/* Section Glow Effect */
+/* GLOW — HERO SECTION */
 #section-uXQ_FD0Nu8 {
   position: relative;
   z-index: 1;
@@ -115,31 +123,79 @@ button:hover {
   width: 1000px;
   height: 800px;
   transform: translateX(-50%);
-  background: radial-gradient(circle, rgba(167,139,250,0.35), transparent 70%);
-  opacity: 0.5;
+  background: radial-gradient(circle, rgba(206, 241, 123, 0.2), transparent 70%);
+  opacity: 1;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* BODY BACKDROP PULSE */
+body::before {
+  content: "";
+  position: fixed;
+  top: -20%;
+  left: -10%;
+  width: 1200px;
+  height: 1200px;
+  background: radial-gradient(circle at 30% 30%, rgba(206, 241, 123, 0.12), transparent 60%);
+  animation: pulseBlob 8s ease-in-out infinite alternate;
   filter: blur(120px);
   pointer-events: none;
   z-index: 0;
 }
 
-/* Footer Text */
+@keyframes pulseBlob {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(50px, 80px) scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+/* ANIMATED UNDERLINE */
+a {
+  position: relative;
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+
+/* FOOTER STYLES */
 .cparagraph-CoFamRGU-U,
 .cparagraph-tQXMyOmc-h {
-  color: #a1a1aa !important;
+  color: #777 !important;
   font-size: 14px;
   text-align: center;
 }
+
 .cparagraph-CoFamRGU-U a,
 .cparagraph-tQXMyOmc-h a {
   color: var(--primary);
-  text-decoration: none;
-}
-.cparagraph-CoFamRGU-U a:hover,
-.cparagraph-tQXMyOmc-h a:hover {
-  color: white;
+  transition: color 0.3s ease;
 }
 
-/* Responsive Typography */
+/* RESPONSIVE HEADINGS */
 @media screen and (max-width: 480px) {
   h1, h2 {
     font-size: 28px !important;
@@ -162,41 +218,16 @@ button:hover {
   }
 }
 
-/* SVG Logo Injection (Optional Override) */
+/* LOGO IMAGE SWAP (optional) */
 .image-container img.hl-optimized {
   display: none !important;
 }
-
 .image-container::before {
   content: '';
   display: inline-block;
   width: 158px;
   height: 20px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' ... />"); /* Replace with actual logo SVG */
+  background-image: url("data:image/svg+xml,..."); /* insert your SVG logo here */
   background-repeat: no-repeat;
   background-size: contain;
 }
-
-
-/* === FUTURE-PROOF SELECTORS: Custom Elements (TODO: Apply if needed) 
-#section-DNU3a-G89w {}
-#section-l0GyoipRh3 {}
-
-.row-XogUeZkuhv {}
-.row-90yZXZgE1e {}
-.row-zOtnQQ0AxG {}
-.row-JUu733z7NZ {}
-.row-th30LMgBh1 {}
-
-.col-SOZnv1EXC- {}
-.col-VUjfcaAuVN {}
-.col-YTx2PiLVKi {}
-.col-eoZO1oiOeH {}
-.col-Fy1TPg1Auj {}
-.col-KApAxwsOc4 {}
-
-.cimage-Q4JzQA0quu {}
-.image-Q4JzQA0quu {}
-.cvideo-40uv-KbGRV {}
-.custom-code-PaN8owslW5 {}
-=== */
