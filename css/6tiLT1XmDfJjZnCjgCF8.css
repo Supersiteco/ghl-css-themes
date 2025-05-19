@@ -172,7 +172,7 @@ a:hover::after {
 
 /* === FOOTER PARAGRAPH + LINKS (Scoped to Footer Container) === */
 .minimal_footer [class^="cparagraph-"] {
-  color: #4d4d4d !important;
+  color: var(--link-color) !important;
   font-size: 14px;
   text-align: center;
   padding-bottom: 0 !important;
@@ -186,7 +186,7 @@ a:hover::after {
 }
 
 .minimal_footer [class^="cparagraph-"] a:hover {
-  color: #91b15a !important;
+  color: var(--link-color) !important;
   text-decoration: underline;
 }
 
