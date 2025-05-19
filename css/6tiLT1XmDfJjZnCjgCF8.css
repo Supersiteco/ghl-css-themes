@@ -164,15 +164,39 @@ a:hover::after {
   text-align: center;
 }
 
+/* Base link color (grey) */
 .cparagraph-CoFamRGU-U a,
-.cparagraph-tQXMyOmc-h a {
+.cparagraph-CoFamRGU-U a *,
+.cparagraph-tQXMyOmc-h a,
+.cparagraph-tQXMyOmc-h a * {
   color: #8C8C8C !important;
+  text-decoration: none;
+  position: relative;
   transition: color 0.3s ease;
 }
 
-.cparagraph-CoFamRGU-U a:hover,
-.cparagraph-tQXMyOmc-h a:hover {
-  color: var(--primary);
+/* Hover underline only (green) */
+.cparagraph-CoFamRGU-U a::after,
+.cparagraph-CoFamRGU-U a *::after,
+.cparagraph-tQXMyOmc-h a::after,
+.cparagraph-tQXMyOmc-h a *::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #91b15a;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.cparagraph-CoFamRGU-U a:hover::after,
+.cparagraph-CoFamRGU-U a:hover *::after,
+.cparagraph-tQXMyOmc-h a:hover::after,
+.cparagraph-tQXMyOmc-h a:hover *::after {
+  transform: scaleX(1);
 }
 
 /* === RESPONSIVE HEADINGS === */
