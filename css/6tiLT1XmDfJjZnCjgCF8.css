@@ -120,7 +120,7 @@ button:hover {
   transform: translateX(-50%);
   width: 1200px;
   height: 800px;
-  background: radial-gradient(circle at center, rgba(206, 241, 123, 0.35), transparent 70%);
+  background: radial-gradient(circle at center, rgba(206, 241, 123, 0.35), transparent 40%);
   filter: blur(120px);
   opacity: 1;
   pointer-events: none;
