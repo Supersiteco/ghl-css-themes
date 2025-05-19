@@ -166,7 +166,7 @@ a:hover::after {
 
 .cparagraph-CoFamRGU-U a,
 .cparagraph-tQXMyOmc-h a {
-  color: #91b15a !important;
+  color: var(--primary) !important;
   transition: color 0.3s ease;
 }
 
