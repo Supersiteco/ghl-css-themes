@@ -4,7 +4,7 @@
   --primary: #000000;
   --secondary: #CEF17B;
   --text-color: #000000;
-  --link-color: #8C8C8C;
+  --link-color: var(--secondary)
   --headlinefont: 'Inter', sans-serif;
   --contentfont: 'Inter', sans-serif;
 
@@ -166,7 +166,7 @@ a:hover::after {
 
 .cparagraph-CoFamRGU-U a,
 .cparagraph-tQXMyOmc-h a {
-  color: #91b15a !important;
+  color: #8C8C8C !important;
   transition: color 0.3s ease;
 }
 
