@@ -38,9 +38,7 @@ body {
 }
 
 /* === HEADINGS === */
-h1,
-h2,
-h3,
+h1, h2, h3,
 .cheading-0H4DJ0v8VV,
 .cheading-bduB4f6Wa2 {
   color: #000 !important;
@@ -107,25 +105,26 @@ button:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* SECTION BACKGLOW (LIME GLOW) */
-#section-uXQ_FD0Nu8 {
-  position: relative;
-  z-index: 1;
+/* === STATIC GLOW (VISIBLE) === */
+#vsl_hero {
+  position: relative !important;
+  z-index: 2 !important;
+  overflow: visible !important;
 }
 
-#section-uXQ_FD0Nu8::after {
+#vsl_hero::after {
   content: '';
   position: absolute;
-  top: -150px;
+  top: -180px;
   left: 50%;
-  width: 1000px;
-  height: 800px;
   transform: translateX(-50%);
-  background: radial-gradient(circle, rgba(206, 241, 123, 0.2), transparent 70%);
+  width: 1000px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(206, 241, 123, 0.3), transparent 70%);
   opacity: 1;
   filter: blur(100px);
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
 }
 
 /* === ANIMATED LINK UNDERLINE === */
@@ -174,9 +173,7 @@ a:hover::after {
 
 /* === RESPONSIVE HEADINGS === */
 @media screen and (max-width: 480px) {
-
-  h1,
-  h2 {
+  h1, h2 {
     font-size: 28px !important;
   }
 
@@ -187,9 +184,7 @@ a:hover::after {
 }
 
 @media screen and (min-width: 481px) {
-
-  h1,
-  h2 {
+  h1, h2 {
     font-size: 36px !important;
   }
 
