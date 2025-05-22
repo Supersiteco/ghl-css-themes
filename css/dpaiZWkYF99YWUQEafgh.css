@@ -57,7 +57,8 @@ h1, h2, h3,
 }
 
 /* === BULLETS === */
-  div.benefits_list {
+  div.benefits_list,
+  .hl_page-preview--content {
     color: var(--secondary) !important;
   }
 
