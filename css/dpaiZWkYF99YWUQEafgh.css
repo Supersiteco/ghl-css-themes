@@ -4,7 +4,6 @@
   --primary: #000000;
   --secondary: #CEF17B;
   --text-color: #000000;
-  --link-color: #8C8C8C;
   --headlinefont: 'Inter', sans-serif;
   --contentfont: 'Inter', sans-serif;
 
@@ -189,6 +188,12 @@ a:hover::after {
   color: var(--link-color) !important;
   text-decoration: underline;
 }
+
+.footer.links {
+  color: #000 !important;
+}
+
+
 
 /* === RESPONSIVE HEADINGS === */
 @media screen and (max-width: 480px) {
