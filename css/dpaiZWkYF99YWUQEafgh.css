@@ -64,7 +64,7 @@ h1, h2, h3,
 .benefits_list ul li::marker {
   font-family: "Font Awesome 5 Free";
   font-weight: 700;
-  color: var(--primary);
+  color: var(--primary) !important;
   font-size: 1.2em;
 }
 
