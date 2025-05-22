@@ -179,29 +179,21 @@ a:hover::after {
   margin-bottom: 0 !important;
 }
 
-.minimal_footer [class^="cparagraph-"] a {
+/* Footer copyright text */
+.minimal_footer .footer_copy {
   color: var(--link-color) !important;
-  transition: color 0.3s ease;
-  text-decoration: none;
+  font-size: 14px;
 }
 
-.minimal_footer [class^="cparagraph-"] a:hover {
-  color: var(--link-color) !important;
-  text-decoration: underline;
-}
-
-.minimal_footer .footer.links,
-.minimal_footer [class^="cparagraph-"] .footer.links {
-  color: #000 !important;
-}
-
-.footer_links a {
+/* Footer links */
+.minimal_footer .footer_links a {
   color: #000 !important;
   font-weight: bold !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-/* For better visibility you might also want to increase the contrast */
-.footer_links a:hover {
+.minimal_footer .footer_links a:hover {
   color: var(--secondary) !important;
   text-decoration: underline !important;
 }
