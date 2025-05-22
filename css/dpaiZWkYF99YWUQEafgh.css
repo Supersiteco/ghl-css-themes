@@ -187,14 +187,14 @@ a:hover::after {
 
 /* Footer links */
 .minimal_footer .footer_links a {
-  color: #000 !important;
+  color: var(--primary) !important;
   font-weight: bold !important;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .minimal_footer .footer_links a:hover {
-  color: var(--secondary) !important;
+  color: var(--primary) !important;
   text-decoration: underline !important;
 }
 
