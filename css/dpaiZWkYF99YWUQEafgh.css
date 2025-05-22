@@ -61,7 +61,7 @@ h1, h2, h3,
   color: #444 !important;
 }
 
-.benefits_list ul li::marker {
+  .bulletList ul li::marker {
   font-family: "Font Awesome 5 Free";
   font-weight: 700;
   color: var(--primary) !important;
