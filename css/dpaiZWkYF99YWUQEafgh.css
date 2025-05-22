@@ -4,6 +4,7 @@
   --primary: #000000;
   --secondary: #CEF17B;
   --text-color: #000000;
+  --link-color: #000000;
   --headlinefont: 'Inter', sans-serif;
   --contentfont: 'Inter', sans-serif;
 
@@ -189,11 +190,10 @@ a:hover::after {
   text-decoration: underline;
 }
 
-.footer.links {
+.minimal_footer .footer.links,
+.minimal_footer [class^="cparagraph-"] .footer.links {
   color: #000 !important;
 }
-
-
 
 /* === RESPONSIVE HEADINGS === */
 @media screen and (max-width: 480px) {
