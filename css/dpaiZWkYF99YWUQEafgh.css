@@ -57,10 +57,11 @@ h1, h2, h3,
 }
 
 /* === BULLETS === */
-  div.benefits_list,
-  .hl_page-preview--content {
-    color: var(--secondary) !important;
-  }
+div.benefits_list,
+div.benefits_list * {
+  font-family: var(--headlinefont) !important;
+  color: var(--secondary) !important;
+}
 
   div.benefits_list ul li::marker {
   font-family: "Font Awesome 5 Free" !important;
