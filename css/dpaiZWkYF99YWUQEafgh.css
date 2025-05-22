@@ -57,9 +57,9 @@ h1, h2, h3,
 }
 
 /* === BULLETS === */
-div.benefits_list {
-  color: #var(var(--secondary) !important;
-}
+  div.benefits_list {
+    color: var(--secondary) !important;
+  }
 
   div.benefits_list ul li::marker {
   font-family: "Font Awesome 5 Free" !important;
