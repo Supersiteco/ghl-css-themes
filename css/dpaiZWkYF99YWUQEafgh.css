@@ -195,6 +195,17 @@ a:hover::after {
   color: #000 !important;
 }
 
+.footer_links a {
+  color: #000 !important;
+  font-weight: bold !important;
+}
+
+/* For better visibility you might also want to increase the contrast */
+.footer_links a:hover {
+  color: var(--secondary) !important;
+  text-decoration: underline !important;
+}
+
 /* === RESPONSIVE HEADINGS === */
 @media screen and (max-width: 480px) {
   h1, h2 {
