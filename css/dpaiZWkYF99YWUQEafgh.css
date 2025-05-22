@@ -183,6 +183,11 @@ a:hover::after {
   font-size: 14px;
 }
 
+.paragraph-u5-rf98eCEj a, .paragraph-u5-rf98eCEj a * {
+  color: var(--primary)!important;
+  text-decoration: none;
+  }
+
 /* Footer links */
 .minimal_footer .footer_links a {
   color: var(--primary) !important;
