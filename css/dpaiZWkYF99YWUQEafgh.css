@@ -3,8 +3,6 @@
 :root {
   --primary: #000000;
   --secondary: #CEF17B;
-  --text-color: #000000;
-  --link-color: #000000;
   --headlinefont: 'Inter', sans-serif;
   --contentfont: 'Inter', sans-serif;
 
@@ -172,7 +170,7 @@ a:hover::after {
 
 /* === FOOTER PARAGRAPH + LINKS (Scoped to Footer Container) === */
 .minimal_footer [class^="cparagraph-"] {
-  color: var(--link-color) !important;
+  color: var(--primary) !important;
   font-size: 14px;
   text-align: center;
   padding-bottom: 0 !important;
@@ -181,7 +179,7 @@ a:hover::after {
 
 /* Footer copyright text */
 .minimal_footer .footer_copy {
-  color: var(--link-color) !important;
+  color: var(--primary) !important;
   font-size: 14px;
 }
 
