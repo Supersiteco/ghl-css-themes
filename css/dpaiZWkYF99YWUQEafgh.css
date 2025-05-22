@@ -244,3 +244,10 @@ a:hover::after {
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+[class^="paragraph-"] a, 
+[class^="paragraph-"][class*="footer_links"] a {
+    color: #000000 !important;
+    font-weight: bold !important;
+    text-decoration: underline !important;
+}
